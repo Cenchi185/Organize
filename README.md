@@ -177,6 +177,15 @@ OnDrawGizmos 는 씬화면에 항상 표시, OnDrawGizmosSelected 는 오브젝�
 DrawCube 는 정육면체 형태로 보여지고, DrawSphere 는 구 형태로 보여진다. <br>
 몬스터의 스폰위치 같은 실제로 보여지면 안되는 부분의 위치를 표시할때 용이함
 <br><br>
+```C#
+public override void OnInspectorGUI()
+```
+이 함수 내에 정의된 객체의 인스펙터로 커스텀 GUI를 추가 할 수 있다, 반드시 오버라이드 되어야함.
+<br><br>
+```C#
+OnSceneGUI()
+```
+에디터가 Scene 내에 GUI 요소를 추가하여 이벤트를 처리 할 수 있다.
   
   </details>
   
