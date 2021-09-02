@@ -80,7 +80,7 @@ LayerMask Variables
 ```C#
 RaycastHit Variable
 ```
-레이캐스트를 통해 발사된 Ray가 충돌된 오브젝트의 정보를 가지고온다.
+레이캐스트를 통해 발사된 Ray가 충돌된 오브젝트의 정보를 변수에 담아 가지고 온다.
 <br><br>
 ```C#
 Physics.Raycast(시작점, 방향, 충돌 정보 반환, 발사최대거리, 레이어마스크 필터링)  
