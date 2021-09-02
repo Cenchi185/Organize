@@ -140,7 +140,6 @@ Animator.StringToHash("Variables")
 ```
 StringToHash 를 통해 Animator 에 설정해둔 파라미터에 접근할 수 있다.
 <br><br>
-<br><br>
   
   </details>
 
@@ -178,6 +177,11 @@ DrawCube 는 정육면체 형태로 보여지고, DrawSphere 는 구 형태로 �
 몬스터의 스폰위치 같은 실제로 보여지면 안되는 부분의 위치를 표시할때 용이함
 <br><br>
 ```C#
+[CustomEditor(typeof(이름))]
+```
+확장 에디터를 사용하기위해 필요한 선언문
+<br><br>
+```C#
 public override void OnInspectorGUI()
 ```
 이 함수 내에 정의된 객체의 인스펙터로 커스텀 GUI를 추가 할 수 있다, 반드시 오버라이드 되어야함.
@@ -186,6 +190,23 @@ public override void OnInspectorGUI()
 OnSceneGUI()
 ```
 에디터가 Scene 내에 GUI 요소를 추가하여 이벤트를 처리 할 수 있다.
+<br><br>
+```C#
+Handles.color = new Color(R, G, B, 투명도)
+Handles.DrawSolidDisc(중심점, 원을 그릴 축(아마도?), 반지름)
+Handles.DrawWireDisc(중심점, 원을 그릴 축(아마도?), 반지름, 두께)
+Handles.ScaleSlider(수정할 값, 조정점 위치, 조정점 방향, 회전, 조정점 크기, 수정후의 새 값(?))
+```
+color 로 그려질 도형의 색과 투명도를 정할수 있다. <br>
+DrawSolidDisc 는 테두리 없는 꽉찬 형태의 원을 그리고 <br>
+DrawWireDisc 는 테두리만 있는 속이 빈 형태의 원을 그린다. <br>
+ScaleSlider 는 수정할 값의 슬라이더를 만든다.
+<br><br>
+```C#
+Mathf.Clmap(범위를 설정할 값, 변화할수 있는 최소값, 변화할 수 있는 최대값)
+```
+특정 값을 설정한 범위 외의 값이 되지 못하도록 한다.
+  <br><br>
   
   </details>
   
