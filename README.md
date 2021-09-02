@@ -31,6 +31,22 @@
   
   </details>
 
+# NavMeshAgent
+<details mardown="1">
+  <summary> NavMeshAgent Component 보기 </summary>
+  
+|컴포넌트 명|설명|
+|---|---|
+|Agent Type|Agent 개체의 특징 설정|
+|Base Offset|NavMeshAgent 의 높낮이를 조절|
+|Speed|이동할때 속도|
+|Angular Speed|방향을 돌릴때의 속도|
+|Acceleration| 이동할때의 가속도|
+|Stoopping Distance| 제동거리|
+|Auto Breaking| 지점에 도착했을때 자동으로 멈추기|
+  
+</details>
+
 # 1강 Code
 <details mardown="1">
   <summary> 1강 Code 정리 보기 </summary>
@@ -207,8 +223,8 @@ public class ControllerChracter_Bug : MonoBehaviour
     </details>
 <br>
     
-    <details mardown="2">
-      <summary> 문제 해결을 위해 찾아본 정보 </summary>
+<details mardown="1">
+<summary> 문제 해결을 위해 찾아본 정보 </summary>
       
 ![GIF2](https://user-images.githubusercontent.com/80375744/131794661-63cec765-858c-416b-9c1c-2ea8ce8b8603.gif)
 문제 해결을 위해 calcVelocity.y 의 값이 잘못되어 그런게 아닐까 싶어 Debug 를 활용해 수치를 확인해보았더니 <br>
@@ -221,8 +237,8 @@ https://tech.lonpeach.com/2019/09/15/UniRx-Example-IsGrounded/ <br>
 지금 내 지식 수준으로 Raycast 를 활용하기는 힘들어서 고치지 못했다.
 <br><br>
 현재 제작하고자 하는 게임의 목표는 탑다운 뷰 형식의 RPG 게임제작이 목표이므로 <br>
-탑다운 뷰 형식의 게임들에서는 점프가 없는 경우도 있기 때문에, 현재 중요하게 다뤄야할 문제는 아니라 생각하여 일단 넘기기로 했다. <br>
+탑다운 뷰 형식의 게임들에서는 점프가 없는 경우도 있기 때문에, 현재 중요하게 다뤄야할 문제는 아니라 생각하여 일단 넘기기로 했다.
         
-    </details>
+</details>
         
-  </details>
+</details>
