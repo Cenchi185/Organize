@@ -114,3 +114,97 @@ Ray 를 발사하는 시작점과 방향을 지정해서 받은 충돌 정보를
   </details>
   
 # 학습중 발생한 버그
+<details mardown="1">
+  <summary> 점프 버그 </summary>
+
+ ![GIF](https://user-images.githubusercontent.com/80375744/131792202-925c0b4f-fc08-475f-b45d-67914f36b2d6.gif)
+<br>
+Chracter Controller 를 통해 캐릭터를 조종 하는중 발생한 문제이다. <br>
+캐릭터의 점프가 원활하지 않아 캐릭터가 땅에 있는지 체크하는 변수 isGrounded 의 값을 체크해 보았는데 <br>
+분명히 땅을 밟고 있음에도 false 를 출력하다가 아주 가끔 True 가 되면서 점프가 버벅이는 문제점이다. <br>
+
+## 사용 코드
+  <details mardown="1">
+  <summary> 사용한 코드 보기 </summary>
+  
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ControllerChracter_Bug : MonoBehaviour
+{
+    #region Variables
+    public float speed = 5f;            // 이동속도
+    public float jumpHeight = 4f;       // 점프 높이
+    public float dashDistance = 5f;     // 대쉬 거리
+    private bool isGrounded;     // 캐릭터가 땅에 서있는지 아닌지 체크 여부
+
+    public float gravity = -9.81f;      // 중력
+    public Vector3 drags;               // 공기저항
+
+    private CharacterController characterController;    // 제어권한 획득을 위한 변수 선언
+
+    public LayerMask groundLayerMask;   // 캐릭터와 충돌할 레이어 설정
+    private Vector3 calcVelocity;       // 캐릭터의 벡터 계산 값을 담아둘 임시 변수
+
+    #endregion Variables
+    // Start is called before the first frame update
+    void Start()
+    {
+        characterController = GetComponent<CharacterController>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        isGrounded = characterController.isGrounded; // CharacterController 에 있는 isGrounded 변수 사용
+
+        if (isGrounded && calcVelocity.y < 0)   // 땅위에 서있을때
+        {
+            calcVelocity.y = 0;     // y축 방향의 저항력을 없앰
+        }
+
+        Debug.Log(isGrounded);
+
+        // 캐릭터 이동
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));  // 캐릭터의 이동 방향 받아오기
+        characterController.Move(move * Time.deltaTime * speed);    // 게임 실행시 보이는 캐릭터 이동시키기
+
+        if (move != Vector3.zero)   // 캐릭터가 이동중이면
+        {
+            transform.forward = move;   // 해당 방향을 보도록 함
+        }
+
+        // 점프
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)  // 땅에 있을때 점프를 누르면
+        {
+            calcVelocity.y += Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y); // 점프
+            Debug.Log("점프");
+        }
+
+        // 대쉬
+        if (Input.GetKeyDown(KeyCode.LeftShift))    // 대쉬 버튼을 누르면
+        { 
+            Vector3 dashVelocity = Vector3.Scale(transform.forward,
+                                    dashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * drags.x + 1)) / -Time.deltaTime),
+                                    0,
+                                    (Mathf.Log(1f / (Time.deltaTime * drags.z + 1)) / -Time.deltaTime)));   // 대쉬
+            calcVelocity += dashVelocity;   // 캐릭터에 적용될 벡터 값 추가
+        }
+
+        // 중력 계산
+        calcVelocity.y += gravity * Time.deltaTime;
+
+        // 공기저항 계산
+        calcVelocity.x /= 1 + drags.x * Time.deltaTime;
+        calcVelocity.y /= 1 + drags.y * Time.deltaTime;
+        calcVelocity.z /= 1 + drags.z * Time.deltaTime;
+
+        characterController.Move(calcVelocity * Time.deltaTime);    // 중력과 공기저항을 이동시에 더함
+    }
+}
+```
+                                             
+                                             </details>
+  </details>
