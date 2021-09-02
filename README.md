@@ -138,14 +138,14 @@ public class ControllerChracter_Bug : MonoBehaviour
     public float speed = 5f;            // 이동속도
     public float jumpHeight = 4f;       // 점프 높이
     public float dashDistance = 5f;     // 대쉬 거리
+    public float gravity = -9.81f;      // 중력
+
     private bool isGrounded;     // 캐릭터가 땅에 서있는지 아닌지 체크 여부
 
-    public float gravity = -9.81f;      // 중력
     public Vector3 drags;               // 공기저항
+    public LayerMask groundLayerMask;   // 캐릭터와 충돌할 레이어 설정
 
     private CharacterController characterController;    // 제어권한 획득을 위한 변수 선언
-
-    public LayerMask groundLayerMask;   // 캐릭터와 충돌할 레이어 설정
     private Vector3 calcVelocity;       // 캐릭터의 벡터 계산 값을 담아둘 임시 변수
 
     #endregion Variables
@@ -153,6 +153,7 @@ public class ControllerChracter_Bug : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        calcVelocity = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -165,7 +166,7 @@ public class ControllerChracter_Bug : MonoBehaviour
             calcVelocity.y = 0;     // y축 방향의 저항력을 없앰
         }
 
-        Debug.Log(isGrounded);
+        Debug.Log(calcVelocity.y);
 
         // 캐릭터 이동
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));  // 캐릭터의 이동 방향 받아오기
@@ -204,6 +205,7 @@ public class ControllerChracter_Bug : MonoBehaviour
         characterController.Move(calcVelocity * Time.deltaTime);    // 중력과 공기저항을 이동시에 더함
     }
 }
+
 ```
                                              
     </details>
