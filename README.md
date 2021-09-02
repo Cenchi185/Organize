@@ -207,7 +207,7 @@ public class ControllerChracter_Bug : MonoBehaviour
     </details>
 <br>
     
-    <details mardown="1">
+    <details mardown="2">
       <summary> 문제 해결을 위해 찾아본 정보 </summary>
       
 ![GIF2](https://user-images.githubusercontent.com/80375744/131794661-63cec765-858c-416b-9c1c-2ea8ce8b8603.gif)
