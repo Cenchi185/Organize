@@ -31,7 +31,7 @@
   
   </details>
 
-# NavMeshAgent
+# NavMeshAgent Component
 <details mardown="1">
   <summary> NavMeshAgent Component 보기 </summary>
   
@@ -44,6 +44,12 @@
 |Acceleration| 이동할때의 가속도|
 |Stoopping Distance| 제동거리|
 |Auto Breaking| 지점에 도착했을때 자동으로 멈추기|
+|Radious/Height| 물체를 회피할때 물체에서 떨어진 정도 |
+|Quaility| 장애물을 회피할때의 정밀도|
+|Priority| Agent간의 회피 우선순위|
+|Auto Traverse Off Mesh Link| 분리된 메쉬간 자동으로 링크를 생성하는 옵션
+|Auto Repath| 경로가 유효하지 않을때 재탐색 여부|
+|Area Mask| 길찾기를 사용할 레이어 결정|
   
 </details>
 
