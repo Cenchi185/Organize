@@ -196,11 +196,13 @@ Handles.color = new Color(R, G, B, 투명도)
 Handles.DrawSolidDisc(중심점, 원을 그릴 축(아마도?), 반지름)
 Handles.DrawWireDisc(중심점, 원을 그릴 축(아마도?), 반지름, 두께)
 Handles.ScaleSlider(수정할 값, 조정점 위치, 조정점 방향, 회전, 조정점 크기, 수정후의 새 값(?))
+Handles.Lable(위치, 표시할 텍스트, GUIStyle 스타일)
 ```
 color 로 그려질 도형의 색과 투명도를 정할수 있다. <br>
 DrawSolidDisc 는 테두리 없는 꽉찬 형태의 원을 그리고 <br>
 DrawWireDisc 는 테두리만 있는 속이 빈 형태의 원을 그린다. <br>
-ScaleSlider 는 수정할 값의 슬라이더를 만든다.
+ScaleSlider 는 수정할 값의 슬라이더를 만든다.<br>
+Label 로 특정 위치에 글씨를 띄울수 있다. 글씨의 속성은 GUIStyle에서 조정
 <br><br>
 ```C#
 Mathf.Clmap(범위를 설정할 값, 변화할수 있는 최소값, 변화할 수 있는 최대값)
@@ -212,7 +214,6 @@ GUIStyle Variables = new GUIStyle()
 ```
 GUI의 다양한 속성들을 가지고 있다. 폰트 크기, 색상, 정렬 등등...
   <br><br>
-
   
   </details>
   
