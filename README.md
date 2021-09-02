@@ -136,8 +136,9 @@ camera.ScreenPointToRay(Input.MousePosition)
 카메라로 보이는 지점의 좌표를 클릭했을때 그 좌표 지점을 따옴
 <br><br>
 ```C#
-
+Animator.StringToHash("Variables")
 ```
+StringToHash 를 통해 Animator 에 설정해둔 파라미터에 접근할 수 있다.
 <br><br>
 <br><br>
 <br><br>
