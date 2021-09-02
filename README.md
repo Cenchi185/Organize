@@ -141,7 +141,19 @@ Animator.StringToHash("Variables")
 StringToHash 를 통해 Animator 에 설정해둔 파라미터에 접근할 수 있다.
 <br><br>
 <br><br>
-<br><br>
+  
+  </details>
+
+# 2강 Code
+<details mardown="1">
+  <summary> 2강 Code 정리 보기 </summary>
+
+```C#
+LateUpdate()
+```
+모든 Update 함수가 호출 된 후, 마지막으로 호출 <br>
+주로 오브젝트를 따라가도록 설정된 카메라는 LatedUpdate를 사용한다. <br>
+카메라가 목표로 하고 있는 Object 가 Update 함수 내에서 움직이기 때문
 <br><br>
   
   </details>
