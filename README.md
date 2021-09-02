@@ -166,8 +166,6 @@ public class ControllerChracter_Bug : MonoBehaviour
             calcVelocity.y = 0;     // y축 방향의 저항력을 없앰
         }
 
-        Debug.Log(calcVelocity.y);
-
         // 캐릭터 이동
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));  // 캐릭터의 이동 방향 받아오기
         characterController.Move(move * Time.deltaTime * speed);    // 게임 실행시 보이는 캐릭터 이동시키기
@@ -181,7 +179,6 @@ public class ControllerChracter_Bug : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)  // 땅에 있을때 점프를 누르면
         {
             calcVelocity.y += Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y); // 점프
-            Debug.Log("점프");
         }
 
         // 대쉬
@@ -205,10 +202,19 @@ public class ControllerChracter_Bug : MonoBehaviour
         characterController.Move(calcVelocity * Time.deltaTime);    // 중력과 공기저항을 이동시에 더함
     }
 }
-
 ```
-                                             
+<br>
     </details>
+    
 ## 문제 해결을 위한 노력
-
+![GIF2](https://user-images.githubusercontent.com/80375744/131794661-63cec765-858c-416b-9c1c-2ea8ce8b8603.gif)
+문제 해결을 위해 calcVelocity.y 의 값이 잘못되어 그런게 아닐까 싶어 Debug 를 활용해 수치를 확인해보았더니 <br>
+isGrounded 라는 변수는 calcVelocity.y 의 값이 정확히 0 일때만 True 를 반환하지만 <br>
+현재 캐릭터의 y좌표값이 미세하게 0 이하로 떨어져있어서 자꾸만 false 를 반환하는 것 같다.
+<br><br>
+https://tech.lonpeach.com/2019/09/15/UniRx-Example-IsGrounded/
+구글에 검색해보니, isGrounded 자체의 접지 판정 정밀도가 굉장히 별로라고 한다. <br>
+그래서 Raycast 와 병행하여 판정한다고 하는데, 나름대로 노력해보았지만 <br>
+지금 내 지식 수준으로 Raycast 를 활용하기는 힘들어서 고치지 못했다.
+    
   </details>
