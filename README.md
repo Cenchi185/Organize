@@ -212,7 +212,7 @@ public class ControllerChracter_Bug : MonoBehaviour
 isGrounded 라는 변수는 calcVelocity.y 의 값이 정확히 0 일때만 True 를 반환하지만 <br>
 현재 캐릭터의 y좌표값이 미세하게 0 이하로 떨어져있어서 자꾸만 false 를 반환하는 것 같다.
 <br><br>
-https://tech.lonpeach.com/2019/09/15/UniRx-Example-IsGrounded/
+https://tech.lonpeach.com/2019/09/15/UniRx-Example-IsGrounded/ <br>
 구글에 검색해보니, isGrounded 자체의 접지 판정 정밀도가 굉장히 별로라고 한다. <br>
 그래서 Raycast 와 병행하여 판정한다고 하는데, 나름대로 노력해보았지만 <br>
 지금 내 지식 수준으로 Raycast 를 활용하기는 힘들어서 고치지 못했다.
