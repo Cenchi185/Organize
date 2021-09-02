@@ -1,6 +1,9 @@
 # 학습 내용 총정리 목차
 너무 길어지면 추후 제작 예정
 
+<details mardown="1">
+  <summary> Component 보기 </summary>
+
 # RigidBody Component
 <details mardown="1">
   <summary> RigidBody Component 보기 </summary>
@@ -50,6 +53,8 @@
 |Auto Traverse Off Mesh Link| 분리된 메쉬간 자동으로 링크를 생성하는 옵션
 |Auto Repath| 경로가 유효하지 않을때 재탐색 여부|
 |Area Mask| 길찾기를 사용할 레이어 결정|
+  
+</details>
   
 </details>
 
