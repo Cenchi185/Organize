@@ -16,6 +16,9 @@
   </details>
 
 # 1강 Code
+<details mardown="1">
+  <summary> 1강 Code 정리 보기 </summary>
+  
 ```C#
 #region (이름)
 #endregion (이름)
@@ -53,8 +56,7 @@ Input.GetKeyDown(KeyCodes.Variables)
 ```
 GetButtonDown 은 유니티 내에 InputManager를 통해 설정된 입력키를 사용한다. (Edit > Project Setting > Input) <br>
 GetKeyDown 은 키보드에 해당하는 버튼을 누를때 값을 반환한다. <br>
-GetKeyDown 의 변수들 >> https://docs.unity3d.com/kr/530/ScriptReference/KeyCode.html <br>
-
+GetKeyDown 의 변수들 >> https://docs.unity3d.com/kr/530/ScriptReference/KeyCode.html
 <br><br>
 ```C#
 Input.GetKeyDown(KeyCode.Variabels)
@@ -64,7 +66,11 @@ Input.GeyKeyUp(KeyCode.Variables)
 KeyDown 은 눌렀을때, Key 는 누르고 있을때, KeyUp 은 눌렀다가 뗐을때 값을 반환한다. <br> 
 Button 의 경우도 동일하다.
 <br><br>
-
+```C#
+LayerMask Variables
+```
+레이어 마스크는 RayCast 를 사용한 계산을 할때 Ray 가 특정 오브젝트에만 충돌 반응 할수 있도록 하여 <br>
+연산 효율을 높이기 위해 사용됨
 <br><br>
 
 <br><br>
@@ -75,3 +81,5 @@ Button 의 경우도 동일하다.
 <br><br>
 <br><br>
 <br><br>
+  
+  </details>
