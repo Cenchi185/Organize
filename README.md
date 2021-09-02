@@ -155,6 +155,28 @@ LateUpdate()
 주로 오브젝트를 따라가도록 설정된 카메라는 LatedUpdate를 사용한다. <br>
 카메라가 목표로 하고 있는 Object 가 Update 함수 내에서 움직이기 때문
 <br><br>
+```C#
+Quarternion.AngleAxis(회전 각도, 회전 축)
+```
+유니티에서는 물체 회전시 생기는 짐벌락 문제를 해결하기 위해 Querternion 을 사용한다.
+<br><br>
+```C#
+Vector3.SmoothDamp(현재 위치, 도달하려는 위치, 현재 속도, 도착위치까지 걸리는 시간, 이동시 최대속도, 경과시간(?))
+```
+카메라가 움직일때 자연스럽고 부드럽게 움직이도록 해주는 메소드
+<br><br>
+```C#
+OnDrawGizmos()
+OnDrawGizmosSelected()
+Gizmos.color = Color.Variable
+Gizmos.DrawCube(중심부 좌표, 크기)
+Gizmos.DrawSphere(중심부 좌표, 반지름) 
+```
+유니티 Scene 에서 특정 객체의 위치를 표현할 수 있도록 가상의 구와 큐브를 만드는 기능이다.<br>
+OnDrawGizmos 는 씬화면에 항상 표시, OnDrawGizmosSelected 는 오브젝트가 선택됬을때만 보이도록 한다. <br>
+DrawCube 는 정육면체 형태로 보여지고, DrawSphere 는 구 형태로 보여진다. <br>
+몬스터의 스폰위치 같은 실제로 보여지면 안되는 부분의 위치를 표시할때 용이함
+<br><br>
   
   </details>
   
