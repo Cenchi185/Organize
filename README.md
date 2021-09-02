@@ -72,7 +72,9 @@ LayerMask Variables
 레이어 마스크는 RayCast 를 사용한 계산을 할때 Ray 가 특정 오브젝트에만 충돌 반응 할수 있도록 하여 <br>
 연산 효율을 높이기 위해 사용됨
 <br><br>
-
+```C#
+  
+```
 <br><br>
 
 <br><br>
@@ -83,3 +85,5 @@ LayerMask Variables
 <br><br>
   
   </details>
+  
+# 학습중 발생한 버그
