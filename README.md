@@ -18,6 +18,19 @@
   
   </details>
 
+# Character Controller Component
+<details mardown="1">
+  <summary> Character Controller Component 보기 </summary>
+  
+|컴포넌트 명|설명|
+|---|---|
+|Slope Limit|캐릭터가 오를 수 있는 최대 경사|
+|Step Offset|캐릭터가 계단을 오를수 있는 계단의 높이 간격|
+|Skin Width|다른 콜라이더와 부딫혔을 때 겹칠수 있는 정도
+|Min Move Distance|캐릭터가 이동할 수 있는 최소 값, 이 값 미만으로는 움직이지 않는다.|
+  
+  </details>
+
 # 1강 Code
 <details mardown="1">
   <summary> 1강 Code 정리 보기 </summary>
