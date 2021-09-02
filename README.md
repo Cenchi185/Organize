@@ -13,11 +13,11 @@
 # Code
  **#region (이름)** / **#endregion (이름)**
 region 부터 endregion 까지 그룹처리하여 해당 항목을 보이기/숨기기 할수 있다.
-
+<br>
 **Input.GetAxis("Vertical" / "Horizontal")**
 키보드와 조이스틱 입력값에 대해 -1 부터 1까지의 값 반환, 프레임에 영향을 받지 않는다.
-
+<br>
 **transform.변수**
-transform 은 오브젝트에 할당된 Transform 컴포넌트
-위치, 회전, 크기를 담고 있다.
-변수들에 관해서는 >> https://docs.unity3d.com/kr/530/ScriptReference/Transform.html
+transform 은 오브젝트에 할당된 Transform 컴포넌트 <br>
+위치, 회전, 크기를 담고 있다. <br>
+변수들에 관해서는 >> https://docs.unity3d.com/kr/530/ScriptReference/Transform.html <br>
