@@ -209,8 +209,7 @@ public class ControllerChracter_Bug : MonoBehaviour
     
     <details mardown="1">
       <summary> 문제 해결을 위해 찾아본 정보 </summary>
-        
-## 문제 해결을 위한 노력
+      
 ![GIF2](https://user-images.githubusercontent.com/80375744/131794661-63cec765-858c-416b-9c1c-2ea8ce8b8603.gif)
 문제 해결을 위해 calcVelocity.y 의 값이 잘못되어 그런게 아닐까 싶어 Debug 를 활용해 수치를 확인해보았더니 <br>
 isGrounded 라는 변수는 calcVelocity.y 의 값이 정확히 0 일때만 True 를 반환하지만 <br>
