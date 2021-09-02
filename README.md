@@ -115,7 +115,7 @@ Ray 를 발사하는 시작점과 방향을 지정해서 받은 충돌 정보를
   
 # 학습중 발생한 버그
 <details mardown="1">
-  <summary> 점프 버그 </summary>
+  <summary> Character Controller 실습 중 점프 버그 </summary>
 
  ![GIF](https://user-images.githubusercontent.com/80375744/131792202-925c0b4f-fc08-475f-b45d-67914f36b2d6.gif)
 <br>
@@ -206,5 +206,7 @@ public class ControllerChracter_Bug : MonoBehaviour
 }
 ```
                                              
-                                             </details>
+    </details>
+## 문제 해결을 위한 노력
+
   </details>
