@@ -130,9 +130,14 @@ Ray 를 발사하는 시작점과 방향을 지정해서 받은 충돌 정보를
 시작점을 캐릭터의 발끝보다 살짝 위로 지정하면 경사진 면을 오를때 발이 묻히거나 할 경우에도 원활한 체크가 가능하다.
 <br><br>
 ```C#
+Camera camera;
+camera.ScreenPointToRay(Input.MousePosition)
+```
+카메라로 보이는 지점의 좌표를 클릭했을때 그 좌표 지점을 따옴
+<br><br>
+```C#
 
 ```
-<br><br>
 <br><br>
 <br><br>
 <br><br>
