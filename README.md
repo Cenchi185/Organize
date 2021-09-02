@@ -1,7 +1,5 @@
 # 학습 내용 총정리 목차
-<br>
 너무 길어지면 추후 제작 예정
-<br>
 
 # RigidBody Component
 <details mardown="1">
