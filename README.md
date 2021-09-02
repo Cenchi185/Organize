@@ -205,10 +205,10 @@ public class ControllerChracter_Bug : MonoBehaviour
 ```
 <br>
     </details>
+<br>
     
-    
-      <details mardown="1">
-  <summary> 사용한 코드 보기 </summary>
+    <details mardown="1">
+      <summary> 문제 해결을 위해 찾아본 정보 </summary>
         
 ## 문제 해결을 위한 노력
 ![GIF2](https://user-images.githubusercontent.com/80375744/131794661-63cec765-858c-416b-9c1c-2ea8ce8b8603.gif)
