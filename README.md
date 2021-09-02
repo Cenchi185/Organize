@@ -1,3 +1,8 @@
+# 학습 내용 총정리 목차
+<br>
+너무 길어지면 추후 제작 예정
+<br>
+
 # RigidBody Component
 <details mardown="1">
   <summary> RigidBody Component 보기 </summary>
@@ -73,11 +78,20 @@ LayerMask Variables
 연산 효율을 높이기 위해 사용됨
 <br><br>
 ```C#
-  
+RaycastHit Variable
 ```
+레이캐스트를 통해 발사된 Ray가 충돌된 오브젝트의 정보를 가지고온다.
 <br><br>
+```C#
+Physics.Raycast(시작점, 방향, 충돌 정보 반환, 발사최대거리, 레이어마스크 필터링)  
+```
+Ray 를 발사하는 시작점과 방향을 지정해서 받은 충돌 정보를 어디로 넘길 것인지에 대한 코드 <br>
+발사 최대 거리와 레이어마스크를 통해 특정 레이어에만 충돌하도록 필터링 할 수 있다. <br>
+시작점을 캐릭터의 발끝보다 살짝 위로 지정하면 경사진 면을 오를때 발이 묻히거나 할 경우에도 원활한 체크가 가능하다.
+<br><br>
+```C#
 
-<br><br>
+```
 <br><br>
 <br><br>
 <br><br>
