@@ -43,8 +43,10 @@ region 부터 endregion 까지 그룹처리하여 해당 항목을 보이기/숨
 <br><br>
 ~~~C#
 Input.GetAxis("Vertical" / "Horizontal")
+Input.GetAxisRaw("Vertical" / "Horizontal")
 ~~~
-키보드와 조이스틱 입력값에 대해 -1 부터 1까지의 값 반환, 프레임에 영향을 받지 않는다.
+키보드와 조이스틱 입력값에 대해 -1 부터 1사이의 값 반환, 프레임에 영향을 받지 않는다. <br>
+앞,뒤는 Vertical, 왼쪽 오른쪽은 Horizontal
 <br><br>
 ```C#
 transform.Variables
