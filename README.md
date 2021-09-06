@@ -85,7 +85,7 @@ Window - Rendering - LightSettings
 |Realtime Global Ilumination|광원효과를 실시간으로 계산할 것인지 체크, 연산에 부하가 크다.|
 |Lightmapping Settings|라이트 매핑 기법에 대한 설정값들 https://docs.unity3d.com/kr/2018.4/Manual/GlobalIllumination.html|
     
-    </details>
+  </details>
   
 </details>
 
