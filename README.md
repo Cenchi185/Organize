@@ -53,8 +53,19 @@
 |Auto Traverse Off Mesh Link| 분리된 메쉬간 자동으로 링크를 생성하는 옵션
 |Auto Repath| 경로가 유효하지 않을때 재탐색 여부|
 |Area Mask| 길찾기를 사용할 레이어 결정|
+
+  </details>
   
-</details>
+  # Light Mode
+  <details mardown="1">
+  <summary> NavMeshAgent Component 보기 </summary>
+|컴포넌트 명|설명|
+|---|---|
+|RealTime|모든 오브젝트에 광원효과를 주고, 그림자 속성값에 따라 그림자를 생성|
+|Mixed|정적인 오브젝트는 라이트매핑 기법 사용, 동적인 오브젝트는 실시간으로 계산|
+|Baked|움직이는 오브젝트에는 영향이 없고, 정적인 오브젝트 광원 효과만 계산|
+  
+  </details>
   
 </details>
 
