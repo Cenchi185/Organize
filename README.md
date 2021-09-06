@@ -1,3 +1,5 @@
+
+
 # 학습 내용 총정리 목차
 너무 길어지면 추후 제작 예정
 
@@ -59,6 +61,7 @@
   # Light Mode
   <details mardown="1">
   <summary> NavMeshAgent Component 보기 </summary>
+    
 |컴포넌트 명|설명|
 |---|---|
 |RealTime|모든 오브젝트에 광원효과를 주고, 그림자 속성값에 따라 그림자를 생성|
