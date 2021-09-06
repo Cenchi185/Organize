@@ -62,7 +62,7 @@
   
   # Light Mode
   <details mardown="1">
-  <summary> NavMeshAgent Component 보기 </summary>
+  <summary> Light Mode 보기 </summary>
     
 |컴포넌트 명|설명|
 |---|---|
@@ -71,6 +71,21 @@
 |Baked|움직이는 오브젝트에는 영향이 없고, 정적인 오브젝트 광원 효과만 계산|
   
   </details>
+  
+  # Lighting Component
+  <details mardown="1">
+  <summary> Lighting Component 보기 </summary>
+    
+Window - Rendering - LightSettings
+
+|컴포넌트 명|설명|
+|---|---|
+|SkyBox Material|하늘, 배경같은 것들을 표현하는 SkyBox 의 텍스쳐 |
+|Sun Source|현실로 치자면 "태양" 에 속하는 광원효과를 지정하는 것|
+|Realtime Global Ilumination|광원효과를 실시간으로 계산할 것인지 체크, 연산에 부하가 크다.|
+|Lightmapping Settings|라이트 매핑 기법에 대한 설정값들 https://docs.unity3d.com/kr/2018.4/Manual/GlobalIllumination.html|
+    
+    </details>
   
 </details>
 
