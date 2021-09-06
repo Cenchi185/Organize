@@ -217,6 +217,18 @@ GUI의 다양한 속성들을 가지고 있다. 폰트 크기, 색상, 정렬 �
   
   </details>
   
+# 3강 정리
+<details mardown="1">
+  <summary> 3강 정리 보기 </summary>
+  
+## LightMapping 이란?
+Direct Lighting (반사광을 계산하지 않은 라이팅) 과 InDirect Lighting(반사광을 계산한 라이팅) 과 빛의 굴절 같은
+복합적인 요소들을 합쳐 음영을 표현하게 된다.
+하지만 이러한 계산을 실시간으로 하기에는 부하가 많이 걸리기 때문에, LightMapping 이라는 기법을 사용한다.
+정적인 오브젝트들에 대한 음영 표현을 텍스쳐 처럼 입히는것이다. 유니티에서는 이 과정을 베이킹이라고 부른다.
+
+  </details>
+    
 # 학습중 발생한 버그
 <details mardown="1">
   <summary> Character Controller 실습 중 점프 버그 </summary>
