@@ -253,10 +253,24 @@ GUI의 다양한 속성들을 가지고 있다. 폰트 크기, 색상, 정렬 �
   <summary> 3강 정리 보기 </summary>
   
 ## LightMapping 이란?
-Direct Lighting (반사광을 계산하지 않은 라이팅) 과 InDirect Lighting(반사광을 계산한 라이팅) 과 빛의 굴절 같은
-복합적인 요소들을 합쳐 음영을 표현하게 된다.
-하지만 이러한 계산을 실시간으로 하기에는 부하가 많이 걸리기 때문에, LightMapping 이라는 기법을 사용한다.
-정적인 오브젝트들에 대한 음영 표현을 텍스쳐 처럼 입히는것이다. 유니티에서는 이 과정을 베이킹이라고 부른다.
+Direct Lighting (반사광을 계산하지 않은 라이팅) 과 InDirect Lighting(반사광을 계산한 라이팅) 과 빛의 굴절 같은<br>
+복합적인 요소들을 합쳐 음영을 표현하게 된다. <br>
+하지만 이러한 계산을 실시간으로 하기에는 부하가 많이 걸리기 때문에, LightMapping 이라는 기법을 사용한다. <br>
+정적인 오브젝트들에 대한 음영 표현을 텍스쳐 처럼 입히는것이다. 유니티에서는 이 과정을 베이킹이라고 부른다. <br>
+  
+## Global Illumination 이란?
+빛이 표면에 닿으면 반사, 투과, 굴절, 산란 등 다양한 상호작용이 생기게 된다. <br>
+빛이 닿은 표면은 반사되며 그 자체로 또다른 광원이 되는데, 광원이 다른물체에 영향을 주는걸 계산하는 방식 <br>
+https://blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=canny708&logNo=221552589446 << 좀더 자세히 알아보기 <br>
+  
+## Light Probe 란?
+베이킹된 조명정보를 Scene 에 저장하는 기법. 얼핏 들으면 Lightmapping 과 같은게 아닌가 싶을 수 있다. <br>
+Lightmapping 은 표면에 대한 정보(텍스쳐로 입히니깐)를 저장하지만, Light Probe 는 공간에 대한 정보를 저장한다. <br>
+조금더 쉽게 말하자면, 설정한 공간안에 물체가 위치 했을때 해당 위치에서 받는 광원값을 저장해두는 것 같은 느낌이다. <br>
+  
+## Reflection Probe 란?
+Reflection Mapping 기법을 통해 반사되어 보이는 주변환경을 텍스쳐 형태로 입히는 것이다. <br>
+둘러싼 모든 방향의 구면 표시를 캡쳐하는 카메라같은 것 <br>
 
   </details>
     
